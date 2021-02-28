@@ -22,3 +22,7 @@ won't exit on ctrl +c so
 use new terminal docker stop imageName. 
 check docker ps to see status.
 
+## docker-compose.yml
+to install sudo install docker-compose.io
+Is a config file to run multiple containers. 
+
