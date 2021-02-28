@@ -1,0 +1,19 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "description": "use of fibonacci and docker image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farrukh-ishaq/fibonacci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farrukh-ishaq/fibonacci/issues"
+  },
+  "homepage": "https://github.com/farrukh-ishaq/fibonacci#readme"
+}
