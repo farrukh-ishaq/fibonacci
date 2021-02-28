@@ -8,7 +8,7 @@ const init = async () => {
     host: 'localhost'
   })
 
-  await server.start();
+  await server.start()
   console.log('Server running on %s', server.info.uri)
 }
 

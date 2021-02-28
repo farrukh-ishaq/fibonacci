@@ -2,9 +2,9 @@
   "name": "fibonacci",
   "version": "1.0.0",
   "description": "use of fibonacci and docker image.",
-  "main": "server/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
