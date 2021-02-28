@@ -11,4 +11,14 @@ To test docker is working with docker hub, docker run hello-world.
 touch Dockerfile and add in file Dockerfile: 
 From alpine is an image to lay the base of the image container. 
 CMD []: ["params"] like this ["echo hello-world"] 
+USING SCRIPT.SH: give read write premission on script file, and rebuild.
+
+to delete docker rm "contaier name"
+to name and run sudo docker run --name test "build id"
+
+## feature/dockerFromScript
+PID > 1 == script.sh if exist whole docker shuts...
+won't exit on ctrl +c so
+use new terminal docker stop imageName. 
+check docker ps to see status.
 
