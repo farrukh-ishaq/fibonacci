@@ -39,3 +39,9 @@ here 3000 is node container port
 
 to rebuild a docker container 
    docker build -t node-docker .
+
+docker postgres background 
+sudo docker run --name postgres-docker -e POSTGRES_PASSWORD=postgres -d -p 5430:5432  postgres:alpine
+starting interface: 
+    sudo docker exec -it postgres-docker bash
+    few command pwd || ls || psql --help || psql -U postgres || \c fibonacci "fibonacci is a db created.. connect db" || select version();

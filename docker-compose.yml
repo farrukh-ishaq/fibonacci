@@ -1,18 +1,27 @@
-version: "1.28.2"
+version: "3"
 services: 
-  db: 
+  postgres: 
     image: postgres
+    container_name: postgres-fibonacci
     environment: 
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
       POSTGRES_DB: fibonacci
-    volume:
+      POSTGRES_HOST_AUTH_METHOD: trust 
+    volumes:
       - ./pgdata:/var/lib/postgresql/data
     ports: 
-      - '5432:5432'
+      - '5430:5432'
   web:
-    image: 
+    build: .
+    image: node-docker
+    environment: 
+      DB_HOST: postgres
+      DB_NAME: fibonacci
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_PORT: 5430
     depends_on:
-      -db
+      - postgres
     ports: 
-     -'4000:3000'
+     - '4000:3000'
