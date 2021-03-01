@@ -1,5 +1,5 @@
 # fibonacci
-NodeJS and Fibonacci repo.
+NodeJS and Fibonacci repo. Working in docker and seperating each of them in a branch, once the concept is proof a main branch will be created to merge in master with all the required containers configurations and nodejs application runing fibonacci. 
 # Initilisation 
 ## Docker
 docker -v 
