@@ -4,7 +4,7 @@
   "description": "use of fibonacci and docker image.",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/farrukh-ishaq/fibonacci/issues"
   },
-  "homepage": "https://github.com/farrukh-ishaq/fibonacci#readme"
+  "homepage": "https://github.com/farrukh-ishaq/fibonacci#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
 }
