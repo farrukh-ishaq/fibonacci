@@ -26,3 +26,16 @@ check docker ps to see status.
 to install sudo install docker-compose.io
 Is a config file to run multiple containers. 
 
+## docker config/ commands
+to map the docker network with the container port. 
+to start a docker
+docker run -it -p 9000:3000 node-docker
+to start a docker in background
+docker run -d -p 9000:3000 node-docker
+
+here node-docker is container name
+here 9000 is docker port
+here 3000 is node container port
+
+to rebuild a docker container 
+   docker build -t node-docker .
