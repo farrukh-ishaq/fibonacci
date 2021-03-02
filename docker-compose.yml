@@ -1,7 +1,24 @@
 version: "3"
 services: 
+
+  web:
+    build: .
+    container_name: node-docker
+    command: npm start
+    environment: 
+      DB_HOST: postgres
+      DB_NAME: fibonacci
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_PORT: 5430
+    depends_on:
+      - postgres
+    ports: 
+     - '3000:3000'
+    restart: always
+
   postgres: 
-    image: postgres
+    image: postgres:alpine
     container_name: postgres-fibonacci
     environment: 
       POSTGRES_PASSWORD: postgres
@@ -12,16 +29,3 @@ services:
       - ./pgdata:/var/lib/postgresql/data
     ports: 
       - '5430:5432'
-  web:
-    build: .
-    image: node-docker
-    environment: 
-      DB_HOST: postgres
-      DB_NAME: fibonacci
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_PORT: 5430
-    depends_on:
-      - postgres
-    ports: 
-     - '4000:3000'

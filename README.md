@@ -45,3 +45,15 @@ sudo docker run --name postgres-docker -e POSTGRES_PASSWORD=postgres -d -p 5430:
 starting interface: 
     sudo docker exec -it postgres-docker bash
     few command pwd || ls || psql --help || psql -U postgres || \c fibonacci "fibonacci is a db created.. connect db" || select version();
+
+## Knex
+install knex
+npm i knex 
+it will create a knex structure or knexfile
+npx knex
+
+it will create a initial migration
+npx knex migrate:make init --migrations-directory db/migrations 
+
+run migration
+ npx knex migrate:latest --knexfile db/knexfile.js

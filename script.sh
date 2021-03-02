@@ -1,5 +1,9 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
-echo hello world, from a script file.
+set -e
 
-top
+docker-compose down -v
+
+./wait-until "docker-compose exec -T -e PGPASSWORD=postgres postgres psql -U postgres postgres -c 'select 1'"
+
+docker-compose up -d

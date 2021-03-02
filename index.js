@@ -1,20 +1,8 @@
 const express = require('express')
+const router = require('./routes')
 
 const app = express()
-const port = 3000
+app.use(express.json())
+app.use(router)
 
-app.get('/', (req, res) => {
-  res.send('Hello World! pro')
-})
-let retries = 5
-while (retries) {
-  try {
-    app.listen(port, () => {
-      console.log(`node server is started at port: 3000 && retries ${retries}`)
-    })
-    break
-  } catch (error) {
-    console.log(error)
-    retries -= 1
-  }
-}
+app.listen(3000, () => console.log('server listening on 3000'))
