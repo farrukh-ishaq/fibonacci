@@ -1,6 +1,5 @@
  FROM node-docker
  WORKDIR /home/node/app
- RUN mkdir -p ./node_modules && chown -R node:node ./
  USER node
  COPY package*.json ./
  COPY ./index.js .
